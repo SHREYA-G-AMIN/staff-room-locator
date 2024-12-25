@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <link rel="icon" href="hack.png">
+    <title>HACKERS</title>
+</head>
+<body>
+    <div id="loader" class="loader-container"> 
+        <div class="loader">
+        </div> </div>
+         <div id="content" style="display:none;">
+             <!-- Your main content goes here -->
+             </div> 
+             <script> 
+             // Script to hide the loader after a certain time and show the content
+              window.addEventListener('load', function() {
+                 document.getElementById('loader').style.display = 'none'; 
+                 document.getElementById('content').style.display = 'block';
+                  });
+                   </script>
+    <div class="header">
+        <img src="hack.png" alt="Logo" class="logo">
+        <h1 class="title"><div class="cssanimation leFadeInRight sequence ">STAFF  ROOM  LOCATOR</div></h1>
+    </div>
+    <div class="search-bar-container">
+        <div class="search-bar">
+            <input type="text" placeholder="Search..." id="searchInput" onkeyup="searchLecturer()">
+            <img src="icons8.png" alt="Search Icon" class="search-icon">
+            
+        </div>
+    </div>
+    <div class="menu-bar">
+         <button class="menu-toggle" onclick="toggleMenu()">☰</button> 
+         <div class="menu-items"> 
+            <a href="index.html">Home</a> 
+            <a href="#department"onclick="showDepartments()">Department</a>
+             <a href="#about">About Us</a> 
+            </div> </div>
+           
+            <script> 
+            function toggleMenu()
+             { const menu = document.querySelector('.menu-items'); 
+             menu.classList.toggle('show'); 
+             }
+              </script>
+     <!-- Department Section -->
+     <div id="department-section" style="display:none;"> 
+        <h2>Departments</h2> 
+        <ul id="departments"> 
+        <li onclick="showLecturers('cs')">Department of Computer Science</li> 
+        <li onclick="showLecturers('math')">Department of Mathematics</li> 
+        <li onclick="showLecturers('physics')">Department of Physics</li> 
+        <!-- Add more departments as needed -->
+        </ul>
+        </div> 
+        <!-- Lecturer Section --> 
+    <div id="lecturer-section" style="display:none;"> 
+        <h2>Lecturers</h2> 
+        <ul id="lecturers"></ul> 
+    </div> 
+<!-- Lecturer Details Section --> 
+ <div id="lecturer-details" style="display:none;"> 
+<h2>Lecturer Details</h2> 
+<img id="lecturer-photo" src="" alt="Lecturer Photo"> 
+<p id="lecturer-name"></p> 
+<p id="lecturer-cabin"></p> 
+</div> </div> 
+<div id="results"></div>
+<script src="script.js"></script>
+
+    <footer>
+        <img src="hacks.png" alt="Footer Logo" class="footer-logo">
+    </footer>
+</body>
+</html>
